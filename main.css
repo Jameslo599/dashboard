@@ -1,0 +1,83 @@
+body {
+  width: 100vw;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: rgb(20, 19, 19);
+}
+a:hover {
+  text-decoration: underline;
+  color: rgb(221, 117, 117);
+}
+
+#container {
+  display: grid;
+  grid-template-columns: minmax(10em, 1fr) 5fr;
+  grid-template-rows: minmax(10em, 1fr) 4fr;
+  grid-auto-flow: column;
+  height: 100vh;
+}
+
+.main {
+  align-self: center;
+  justify-self: center;
+}
+#sidebar {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  padding-top: 2em;
+  gap: 2em;
+}
+
+#header {
+  grid-column: 2;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.navbar {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: minmax(60vw, 5fr) 1fr;
+  align-self: baseline;
+  justify-self: baseline;
+}
+#projects {
+  grid-column: 1;
+  grid-row: 1/3;
+}
+#projects > h2 {
+  margin-left: 0.5em;
+}
+#project-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(12em, 1fr));
+  grid-template-rows: repeat(3, minmax(10em, 1fr));
+  gap: 1em;
+  margin: 0 1em;
+}
+
+.additional-info {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.additional-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  justify-self: center;
+  gap: 1em;
+  padding: 2em;
+}

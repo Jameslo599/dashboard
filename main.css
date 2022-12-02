@@ -1,14 +1,23 @@
+* {
+  font-family: "Noto Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
 body {
   width: 100vw;
   height: 100vh;
 }
+p {
+  color: #434a54;
+}
 a {
   text-decoration: none;
-  color: rgb(20, 19, 19);
+  color: #f2f2f2;
 }
 a:hover {
   text-decoration: underline;
-  color: rgb(221, 117, 117);
+  color: #ccd1d9;
 }
 
 #container {
@@ -19,18 +28,18 @@ a:hover {
   height: 100vh;
 }
 
-.main {
-  align-self: center;
-  justify-self: center;
-}
 #sidebar {
   grid-column: 1;
   grid-row: 1 / 3;
   display: flex;
   flex-direction: column;
-  align-self: flex-start;
+  align-items: center;
   padding-top: 2em;
   gap: 2em;
+  background-color: #4a89dc;
+}
+#sidebar > section {
+  width: 10em;
 }
 
 #header {
@@ -42,13 +51,14 @@ a:hover {
   display: flex;
   gap: 2em;
   align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
 }
 
 #content {
   display: grid;
   grid-template-columns: minmax(60vw, 5fr) 1fr;
-  align-self: baseline;
-  justify-self: baseline;
+  background-color: #e6e9ed;
 }
 #projects {
   grid-column: 1;
@@ -67,7 +77,8 @@ a:hover {
 .project-card {
   display: grid;
   grid-template-rows: 1fr 3fr 1fr;
-  margin: 1em;
+  padding: 1em;
+  background-color: #ffffff;
 }
 .subject {
   height: 2em;
@@ -93,13 +104,14 @@ p {
   grid-column: 2;
   display: flex;
   flex-direction: column;
+  margin-right: 1em;
 }
 /* Entry Styling */
 .additional-container {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  padding: 1em 1em;
-  width: 12em;
+  background-color: #ffffff;
+  padding: 1em;
 }
 .additional-container > div {
   border-bottom-color: rgb(44, 27, 27);
@@ -115,7 +127,6 @@ p {
 }
 .additional-container > div > p {
   height: 3em;
-  width: 12em;
   overflow: auto;
   word-break: break-all;
 }
